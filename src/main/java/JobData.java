@@ -94,12 +94,17 @@ public class JobData {
      * @return      List of all jobs with at least one field containing the value
      */
     public static ArrayList<HashMap<String, String>> findByValue(String value) {
-
         // load data, if not already loaded
         loadData();
-
-        // TODO - implement this method
-        return null;
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+        for (HashMap<String, String> row : allJobs) {
+            for (HashMap.Entry<String, String> entry: row.entrySet()) {
+                if(entry.getValue().toLowerCase().contains(value.toLowerCase())) {
+                    jobs.add(row);
+                }
+            }
+        }
+        return jobs;
     }
 
     /**

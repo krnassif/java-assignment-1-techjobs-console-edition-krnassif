@@ -60,7 +60,7 @@ public class TechJobs {
                 // What is their search term?
                 System.out.println("\nSearch term:");
                 String searchTerm = in.nextLine();
-
+//call findByValue somewhere around/within this method (searchField)
                 if (searchField.equals("all")) {
                     printJobs(JobData.findByValue(searchTerm));
                 } else {
@@ -129,7 +129,7 @@ public class TechJobs {
             for (Map.Entry<String, String> jobs : someJob.entrySet()) {
                 System.out.println(jobs.getKey() + ": " + jobs.getValue());
             }
-            System.out.println("*****");
+            System.out.println("*****" + "\n");
             }
         }
     }
