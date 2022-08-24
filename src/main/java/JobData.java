@@ -96,10 +96,14 @@ public class JobData {
     public static ArrayList<HashMap<String, String>> findByValue(String value) {
         // load data, if not already loaded
         loadData();
+
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+
         for (HashMap<String, String> row : allJobs) {
+
             for (HashMap.Entry<String, String> entry: row.entrySet()) {
-                if(entry.getValue().toLowerCase().contains(value.toLowerCase())) {
+
+                if (entry.getValue().toLowerCase().contains(value.toLowerCase())) {
                     jobs.add(row);
                 }
             }

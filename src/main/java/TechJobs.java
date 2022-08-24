@@ -60,7 +60,7 @@ public class TechJobs {
                 // What is their search term?
                 System.out.println("\nSearch term:");
                 String searchTerm = in.nextLine();
-//call findByValue somewhere around/within this method (searchField)
+//call findByValue somewhere around/within searchField
                 if (searchField.equals("all")) {
                     printJobs(JobData.findByValue(searchTerm));
                 } else {
