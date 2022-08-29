@@ -60,7 +60,6 @@ public class TechJobs {
                 // What is their search term?
                 System.out.println("\nSearch term:");
                 String searchTerm = in.nextLine();
-//call findByValue somewhere around/within searchField
                 if (searchField.equals("all")) {
                     printJobs(JobData.findByValue(searchTerm));
                 } else {
@@ -120,16 +119,16 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         if (someJobs.size() < 1){
-            System.out.println("No jobs found");
+            System.out.print("No Results");
         } else {
 
             for (HashMap<String, String> someJob : someJobs) {
-                System.out.println("*****");
+                System.out.println("\n" + "*****");
 
             for (Map.Entry<String, String> jobs : someJob.entrySet()) {
                 System.out.println(jobs.getKey() + ": " + jobs.getValue());
             }
-            System.out.println("*****" + "\n");
+            System.out.println("*****");
             }
         }
     }
